@@ -1,0 +1,23 @@
+{
+  "name": "floatshop_faker",
+  "version": "1.0.0",
+  "description": "fake data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanYoungPark/floatshop_faker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeanYoungPark/floatshop_faker/issues"
+  },
+  "homepage": "https://github.com/JeanYoungPark/floatshop_faker#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
