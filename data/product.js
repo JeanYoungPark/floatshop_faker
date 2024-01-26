@@ -10,6 +10,7 @@ export const productData = () => {
             id: index + 1,
             title: faker.commerce.productName(),
             price: faker.commerce.price({ min: 10000, max: 100000 }),
+            discount: faker.number.int({ min: 0, max: 100 }),
             category_id: categoryId,
             sub_category_id: categoryId === 1 ? faker.number.int({ min: 1, max: 5 }) : null, // 
             description: faker.commerce.productDescription(),

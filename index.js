@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { getCategories, getProducts, initializeData } from './myModule/dataModule.js';
+import { initializeData } from './myModule/dataModule.js';
 
 export const app = express();
 const port = 3001;

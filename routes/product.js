@@ -1,25 +1,26 @@
 import express from "express";
-import { productData, productImageData } from "../data/product.js";
+import { getProductImages, getProducts } from "../myModule/dataModule.js";
 
 export const productRouter = express.Router();
+const products = getProducts();
+const productImages = getProductImages();
 
 productRouter.post('/product', (req, res) => {
     const categoryId = parseInt(req.body.category_id);
     const subCategoryId = parseInt(req.body.sub_category_id);
-
-    const products = productData().filter((product) => {
+    
+    const productList = products.filter((product) => {
         if(subCategoryId){
             return product.category_id === categoryId && product.sub_category_id === subCategoryId;
         }else {
             return product.category_id === categoryId;
         }
     });
-
-    const images = productImageData();
+    
     const list = [];
     
-    products.forEach(product => {
-        images.forEach(image => {
+    productList.forEach(product => {
+        productImages.forEach(image => {
             if(product.id === image.product_id) {
                 !product.images.length && product.images.push(image)
             }

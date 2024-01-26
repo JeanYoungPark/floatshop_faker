@@ -1,13 +1,13 @@
 export const categoryData = [
-    { id: 1, title: '의류' },
-    { id: 2, title: '산책' },
-    { id: 3, title: '리빙' } 
+    { id: 1, title: 'category 1' },
+    { id: 2, title: 'category 2' },
+    { id: 3, title: 'category 3' } 
 ]
 
 export const subCategoryData = [
-    { category_id: 1, title: '민소매, 나시', id: 1 },
-    { category_id: 2, title: '티셔츠', id: 1 },
-    { category_id: 3, title: '후드', id: 1 },
-    { category_id: 4, title: '아우터', id: 1 },
-    { category_id: 5, title: '악세사리', id: 1 }
+    { id: 1, title: 'subCategory 1', category_id: 1 },
+    { id: 2, title: 'subCategory 2', category_id: 1 },
+    { id: 3, title: 'subCategory 3', category_id: 1 },
+    { id: 4, title: 'subCategory 4', category_id: 1 },
+    { id: 5, title: 'subCategory 5', category_id: 1 }
 ]
