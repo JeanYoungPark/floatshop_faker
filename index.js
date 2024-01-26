@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import { getCategories, getProducts, initializeData } from './myModule/dataModule.js';
 
 export const app = express();
 const port = 3001;
@@ -10,6 +11,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+initializeData();
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);

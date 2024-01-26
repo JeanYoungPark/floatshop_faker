@@ -2,8 +2,8 @@
   "name": "floatshop_faker",
   "version": "1.0.0",
   "description": "fake data",
-  "main": "index.js",
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "watch": "nodemon app.js",

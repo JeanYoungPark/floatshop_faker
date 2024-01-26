@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker/locale/ko";
 
-export const product = () => {
+export const productData = () => {
     const list = [];
 
     for (let index = 0; index < 50; index++) {
@@ -20,7 +20,7 @@ export const product = () => {
     return list;    
 }
 
-export const productImage = () => {
+export const productImageData = () => {
     const list = [];
 
     for (let index = 0; index < 50; index++) {
