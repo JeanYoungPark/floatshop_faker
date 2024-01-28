@@ -27,6 +27,6 @@ productRouter.post('/product', (req, res) => {
         })
         list.push(product);
     })
-
+    
     return res.status(200).json(list);
 })

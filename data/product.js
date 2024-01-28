@@ -14,6 +14,7 @@ export const productData = () => {
             category_id: categoryId,
             sub_category_id: categoryId === 1 ? faker.number.int({ min: 1, max: 5 }) : null, // 
             description: faker.commerce.productDescription(),
+            likes: faker.number.int({ min: 0, max: 100 }),
             images: []
         });
     }
@@ -24,10 +25,10 @@ export const productData = () => {
 export const productImageData = () => {
     const list = [];
 
-    for (let index = 0; index < 50; index++) {
+    for (let index = 0; index < 100; index++) {
         list.push({
             id: index + 1,
-            url: faker.image.urlLoremFlickr({ category: 'fashion' }),
+            url: faker.image.urlLoremFlickr({ category: 'animal' }),
             product_id: faker.number.int({ min: 1, max: 50 })
         })
     }
