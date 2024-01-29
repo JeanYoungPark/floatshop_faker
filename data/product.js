@@ -13,7 +13,7 @@ export const productData = () => {
             discount: faker.number.int({ min: 0, max: 100 }),
             category_id: categoryId,
             sub_category_id: categoryId === 1 ? faker.number.int({ min: 1, max: 5 }) : null, // 
-            description: faker.commerce.productDescription(),
+            description: faker.lorem.paragraphs({ min: 10, max: 100 }),
             likes: faker.number.int({ min: 0, max: 100 }),
             images: []
         });

@@ -6,6 +6,19 @@ const products = getProducts();
 const productImages = getProductImages();
 
 productRouter.post('/product', (req, res) => {
+    const productId = parseInt(req.body.product_id);
+    const product = products.find((product) => product.id === productId);
+
+    productImages.forEach(image => {
+        if(productId === image.product_id) {
+            product.images.push(image)
+        }
+    })
+    
+    return res.status(200).json(product);
+})
+
+productRouter.post('/product/list', (req, res) => {
     const categoryId = parseInt(req.body.category_id);
     const subCategoryId = parseInt(req.body.sub_category_id);
     
