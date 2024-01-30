@@ -1,9 +1,10 @@
 import express from "express";
-import { getProductImages, getProducts } from "../myModule/dataModule.js";
+import { getProductImages, getProducts, getReviews } from "../myModule/dataModule.js";
 
 export const productRouter = express.Router();
 const products = getProducts();
 const productImages = getProductImages();
+const reviews = getReviews();
 
 productRouter.post('/product', (req, res) => {
     const productId = parseInt(req.body.product_id);
@@ -14,7 +15,13 @@ productRouter.post('/product', (req, res) => {
             product.images.push(image)
         }
     })
-    
+
+    const reviewList = reviews.filter(review => {
+        return productId === review.product_id
+    })
+
+    product.reviews = reviewList;
+    console.log(product);
     return res.status(200).json(product);
 })
 
@@ -38,6 +45,12 @@ productRouter.post('/product/list', (req, res) => {
                 !product.images.length && product.images.push(image)
             }
         })
+
+        const reviewList = reviews.filter(review => {
+            return product.id === review.product_id
+        })
+        
+        product.review_cnt = reviewList.length;
         list.push(product);
     })
     

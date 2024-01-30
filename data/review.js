@@ -8,10 +8,11 @@ export const reviewData = () => {
         list.push({
             id: index + 1,
             title: faker.lorem.sentence(),
-            product_id: faker.number.int({ min: 1, max: 100 }), 
-            content: faker.lorem.paragraphs({ min: 10, max: 100 }),
+            product_id: faker.number.int({ min: 1, max: 50 }), 
+            content: faker.lorem.paragraphs({ min: 2, max: 10 }),
             user_id: faker.person.lastName(),
             images: faker.image.urlLoremFlickr({ category: 'person' }),
+            reg_date: faker.date.anytime()
         });
     }
 
