@@ -21,7 +21,6 @@ productRouter.post('/product', (req, res) => {
     })
 
     product.reviews = reviewList;
-    console.log(product);
     return res.status(200).json(product);
 })
 
